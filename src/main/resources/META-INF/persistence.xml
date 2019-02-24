@@ -1,0 +1,27 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+
+    <persistence-unit name="demo-jpa" transaction-type="RESOURCE_LOCAL">
+        <class>org.lsis.vmartin.d21.demo_jpa.domain.Level</class>
+        <class>org.lsis.vmartin.d21.demo_jpa.domain.Person</class>
+        <class>org.lsis.vmartin.d21.demo_jpa.domain.Student</class>
+        <class>org.lsis.vmartin.d21.demo_jpa.domain.Teacher</class>
+
+        <properties>
+            <!--Database and scrip generation. -->
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.create-target" value="demo-jpa_creation.ddl"/>
+            <property name="javax.persistence.schema-generation.scripts.drop-target" value="demo-jpa_drop.ddl"/>
+
+
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo-jpa" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="0000" />
+        </properties>
+    </persistence-unit>
+</persistence>
