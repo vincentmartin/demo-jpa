@@ -1,4 +1,4 @@
-Moteur de recherche avec Hibernate Search
+Démo JPA
 =========
 
 Démonstration de Java Persistence API (JPA) avec Hibernate. JPA est une API d'ORM (Object Relational Mapping) et permet de manipuler des entités qui sont sauvées dans une base de données relationnelle (PostgreSQL, MariaDB, ...). JPA permet une abstraction de la base de données et évite donc l'écriture de classes pour gérer les opérations CRUD (Create, Read, Update, Delete).
